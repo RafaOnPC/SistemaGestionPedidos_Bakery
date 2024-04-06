@@ -1,0 +1,176 @@
+/*========================================*/
+/*========================================*/
+/*VISTA HEADER*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 340px;
+    height: 100vh;
+    background-color: #841B35;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 100;
+}
+
+header {
+    display: block;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+header ul li {
+    text-decoration: none;
+    padding: 20px;
+}
+
+header ul .perfil img {
+    width: 230px;
+    height: 230px;
+}
+
+h1 {
+    color: #FBD7C1;
+}
+
+header ul .logo img {
+    width: 180px;
+    height: 180px;
+}
+
+header ul .logo img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+header ul button {
+    width: 120px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 15px;
+    background-color: #FBD7C1;
+    color: #841B35;
+}
+
+header ul button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+header ul button i {
+    font-size: 40px;
+}
+
+/*========================================*/
+/*========================================*/
+/*VISTA CONTENIDOS*/
+.container {
+    margin: 0;
+    padding: 0;
+    background-color: #FBD7C1;
+    height: auto;
+    width: calc(100%-340px);
+    padding-left: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container .row1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+.row1 .partes .image {
+    width: 400px;
+    padding: 10px;
+    background-color: #841B35;
+    border-radius: 20px;
+}
+
+.row1 .partes .title {
+    padding: 10px;
+    color: #841B35;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.row1 .partes .title button {
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    color: #FBD7C1;
+    background-color: #B36D7A;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.row1 .partes .title button:hover {
+    transform: scale(1.2);
+}
+
+.container .row2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+.row2 .partes .image {
+    width: 400px;
+    padding: 10px;
+    background-color: #841B35;
+    border-radius: 20px;
+}
+
+.row2 .partes .title {
+    padding: 10px;
+    color: #841B35;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.row2 .partes .title button {
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    color: #FBD7C1;
+    background-color: #B36D7A;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.row2 .partes .title button:hover {
+    transform: scale(1.2);
+}
+
+.image img {
+    width: 200px;
+    height: 200px;
+}
+
+@media screen and (max-width: 800px){
+    .container .row1{
+        display: block;
+        width: 100%;
+    }
+    .container .row2{
+        display: block;
+        width: 100%;
+    }
+}

@@ -1,0 +1,251 @@
+/*========================================*/
+/*VISTA HEADER*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: none;
+    list-style: none;
+    padding-left: 0;
+}
+
+body {
+    background-color: #FBD7C1;
+}
+
+.table__inicial{
+    border: 5px solid black;
+    padding: 10px;
+    background-color: #ecbac7;
+}
+
+.table__inicial thead{
+    border: 5px solid black;
+    padding: 10px;
+    background-color: #841B35;
+    color: rgb(255, 255, 255);
+}
+
+.table__inicial tbody{
+    border: 5px solid black;
+    padding: 10px;
+    color: #841B35;
+}
+
+.table__inicial tbody td a{
+    padding: 10px;
+    color: #841B35;
+    font-weight: bold;
+}
+
+.table__inicial tbody td a:hover{
+    padding: 10px;
+    color: #cf16c6;
+}
+
+.button_delete{
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.cake{
+    background-color: #be3053;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.erroneo{
+    background-color: rgb(219 39 119);
+    color: #ffffff;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    padding: 2px 2px 2px 10px;
+    border-radius: 5px;
+}
+
+.header {
+    width: 340px;
+    height: 100vh;
+    background-color: #841B35;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 100;
+}
+
+header {
+    display: block;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin-left: 0;
+}
+
+header ul li {
+    text-decoration: none;
+    padding: 20px;
+}
+
+header ul .perfil img {
+    width: 230px;
+    height: 230px;
+}
+
+h1 {
+    color: #FBD7C1;
+}
+
+header ul .logo img {
+    width: 180px;
+    height: 180px;
+}
+
+header ul .logo img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+header ul button {
+    width: 120px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 15px;
+    background-color: #FBD7C1;
+    color: #841B35;
+}
+
+header ul button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+header ul button i {
+    font-size: 40px;
+}
+
+/*========================================*/
+/*========================================*/
+/*VISTA CONTENIDOS*/
+.vista-datos {
+    margin: 0;
+    padding: 0;
+    background-color: #FBD7C1;
+    height: 100vh;
+    width: 100%;
+    padding-left: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+
+}
+
+/*estilo ROW1*/
+.vista-datos .row1 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /*space-around*/
+    padding: 20px;
+}
+.vista-datos .partes{
+    display: flex;
+    justify-content: space-around;
+    padding-right: 80px;
+}
+.row1 .partes .cabecera {
+    width: auto;
+    padding: 10px;
+    color: #841B35;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.row1 .partes .title {
+    padding: 10px;
+    color: #841B35;
+    font-size: 20px;
+}
+
+.row1 .partes .title>button {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    color: #FBD7C1;
+    background-color: #841B35;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.row1 .partes .title button:hover {
+    transform: scale(1.2);
+
+}
+
+/*css row2*/
+.vista-datos .row2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.row2 .partes .title {
+    padding: 10px;
+    color: #841B35;
+    font-size: 20px;
+    font-weight: 600;
+}
+table tbody tr td>a{
+    color: #841B35;
+}
+table tbody tr td>button {
+    width: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+table tbody tr td>button:hover {
+    transform: scale(.82);
+}
+
+.image img {
+    width: 200px;
+    height: 200px;
+}
+
+@media screen and (max-width: 800px) {
+    .vista-datos .row1 {
+        display: block;
+        width: 100%;
+    }
+
+    .vista-datos .row2 {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+/*======================================================*/
+/*================ESTILOS MODAL AGREGAR=================*/
+.modal-estilo{
+    background-color: #841B35;
+    color: #FBD7C1;
+}
+form .modal-body .form-group input{
+    background-color:#FBD7C1;
+    color:  #841B35;
+}
+form .modal-body .form-group select{
+    border-radius: 10px;
+    background-color:#FBD7C1;
+    color:  #841B35;
+}
