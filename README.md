@@ -18,6 +18,9 @@ Diseñada con Bootstrap y Tailwind CSS, la interfaz de usuario ofrece una experi
 + ### Gestión de Stock de Productos
 Integra un sistema de gestión de stock de productos en la gestión de pedidos, lo que permite mantener un control preciso del inventario de productos.
 
++ ### Adaptabilidad a Diferentes Negocios
+Debido a su modularidad y flexibilidad, este sistema puede ser adaptado para cualquier tipo de negocio que requiera manejar inventario, como tiendas minoristas, restaurantes, almacenes, entre otros.
+
 ### 👉 Instalacion
 
 1. *composer update*
