@@ -30,7 +30,6 @@ class PedidoController extends Controller
         
         $usuarios = User::all();
         $productos = Producto::all();
-        //return view('pedidos.createpedido', compact('productos','usuarios'));
         return view('pedidos.creacion', compact('productos','usuarios'));
     }
 
@@ -54,10 +53,6 @@ class PedidoController extends Controller
                         $product->update();
 
                     }
-
-                    /* if($cantidad != 0){
-                        $valor[$product->id] = $cantidad;
-                    } */
                 }
        //Guardar pedido
             //Recoger datos del formulario
@@ -80,13 +75,6 @@ class PedidoController extends Controller
                 $pedido->date_ped =  $validatedData['date_ped'];
                 $pedido->user_id = $validatedData['user_id'];
                 $pedido->save();
-
-        //Capturando cantidades compradas por cada producto
-                
-
-        //Guardar productos en el pedido guardado
-            //Encontrar el pedido guardado y agregar datos de productos al pedido
-            //$pedido = Pedido::findOrFail($pedido->id);
             
             foreach($valor as $id => $product){
                 $pedido_producto = new PedidoProducto();
@@ -130,9 +118,7 @@ class PedidoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
-        //dd($request->all()); 
-        //recoger los datos del formulario a modificar
+        //Recoger los datos del formulario a modificar
         $validatedData = $request->validate([
             'dir_envio' => ['required', 'regex:/^[a-zA-Z\d]+\s[\w\s]+$/'],
             'estado_ped' => 'required|in:E,P,F',
@@ -155,8 +141,6 @@ class PedidoController extends Controller
         $pedido->user_id = $validatedData['user_id'];
         $pedido->save();
 
-        //Recoger en un array asociativo el "prod_id" y la cantidad comprada 
-        //en un array asociativo desde la tabla pedido_productos
         
         $pedidoProducto = PedidoProducto::where('ped_id', $pedido->id)->get(); 
         $pedido_producto =  array();
@@ -164,17 +148,11 @@ class PedidoController extends Controller
             $pedido_producto[$key] = $pedidoProducto[$key]->getAttributes(); 
         }
 
-        //dd($pedido_producto);
-        
-
         //EL array_registro recoge la cantidad comprada de cada producto por un pedido
         for($i=0;$i<count($pedido_producto);$i++){
             $array_registro[$pedidoProducto[$i]->prod_id] = $pedidoProducto[$i]->cant;
         }
 
-        //dd($array_registro);
-
-        //Almacenar en un array asociativo el "prod_id" y la cantidad comprada en el formulario
         //EL array_formulario recoge la cantidad a comprar ACTUALIZADA de cada producto por un pedido 
         $productos = Producto::all();
         foreach($productos as $product){
@@ -183,10 +161,6 @@ class PedidoController extends Controller
                 $array_formulario[$product->id] = $cantidad;
             } 
         }
-
-        
-
-        //dd($array_formulario);
 
         foreach($array_formulario as $indice => $valor) {
             if (array_key_exists($indice, $array_registro) && $array_formulario[$indice] != $array_registro[$indice]) {
@@ -249,8 +223,6 @@ class PedidoController extends Controller
                     return redirect()->route('pedidos.edit',$pedido->id)->with('msg', $message);
                 }
 
-                
-                
                 //Gestion de Stock para nuevo producto agregado
                 $producto->stock = $producto->stock - $array_formulario[$indice];
                 $producto->update();
