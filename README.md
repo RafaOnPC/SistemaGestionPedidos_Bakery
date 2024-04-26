@@ -1,6 +1,6 @@
 ### 👉 Descripción
 
-Este Sistema de Gestión de Pedidos es una aplicación web desarrollada utilizando el framework de PHP, Laravel, Laravel Breeze, Laravel Spatie, MySQL, WampServer, Bootstrap, Tailwind CSS. Este sistema cuenta con apartados para facilitar la gestión eficiente de productos, pedidos y empleados. Asimismo, ofrece un control detallado de roles y permisos para diferentes tipos de empleados, garantizando un acceso adecuado a las funcionalidades del sistema. Los empleados se dividen en cuatro tipos principales: administrador, ventas, productor y distribuidor. Cada tipo de empleado tiene acceso específico a las distintas áreas del sistema, asegurando una experiencia de usuario personalizada y segura.
+Este Sistema de Gestión de Pedidos es una aplicación web desarrollada utilizando el framework de PHP, Laravel, Laravel Breeze, Laravel-permission, MySQL, WampServer, Bootstrap, Tailwind CSS. Este sistema cuenta con apartados para facilitar la gestión eficiente de productos, pedidos y empleados. Asimismo, ofrece un control detallado de roles y permisos para diferentes tipos de empleados, garantizando un acceso adecuado a las funcionalidades del sistema. Los empleados se dividen en cuatro tipos principales: administrador, ventas, productor y distribuidor. Cada tipo de empleado tiene acceso específico a las distintas áreas del sistema, asegurando una experiencia de usuario personalizada y segura.
 
 ### 👉 Aspectos Destacados
 + ### Autenticación de Usuarios
